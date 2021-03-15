@@ -214,7 +214,7 @@ header {
 
 .our_pets__title {
   text-align: center;
-  margin: 0 0 70px 0;
+  margin: 0 0 40px 0;
 }
 
 .our_pets__box {
@@ -227,17 +227,6 @@ header {
   display: flex;
 }
 
-.our_pets_navigation_left {
-  background-color: #f6f6f6;
-}
-
-.our_pets_navigation_right {
-  background-color: #f6f6f6;
-  img:last-child {
-    transform: rotate(180deg);
-  }
-}
-
 .our_pets__item {
   padding: 35px 40px;
   display: flex;
@@ -245,6 +234,9 @@ header {
   justify-content: flex-end;
   align-items: center;
   background-color: #fafafa;
+  img {
+    width: 100%;
+  }
 }
 
 .our_pets__subtitle {
@@ -266,6 +258,11 @@ header {
   letter-spacing: 1.02px;
   color: #292929;
   background-color: #fafafa;
+  transition-duration: 1s;
+  &:hover {
+    color: #292929;
+    background-color: #f1cdb3;
+  }
 }
 
 .our_pets__btn_box {
@@ -283,4 +280,111 @@ header {
   border-radius: 30px;
   background-color: #f1cdb3;
   color: #292929;
+}
+
+// слайдер slick
+
+/* Слайдер */
+.slick-slider {
+}
+/* Слайдер запущен */
+.slick-slider.slick-initialized {
+}
+/* Слайдер с точками */
+.slick-slider.slick-dotted {
+}
+/* Ограничивающая оболочка */
+.slick-list {
+  overflow: hidden;
+}
+/* Лента слайдов */
+.slick-track {
+  display: flex;
+  padding: 30px 0;
+}
+/* Слайд */
+.slick-slide {
+}
+/* Слайд активный (показывается) */
+.slick-slide.slick-active {
+}
+/* Слайд основной */
+.slick-slide.slick-current {
+}
+/* Слайд по центру */
+.slick-slide.slick-center {
+}
+/* Клонированный слайд */
+.slick-slide.slick-cloned {
+}
+/* Стрелка */
+.slick-arrow {
+}
+/* Стрелка влево */
+.slick-arrow.slick-prev {
+}
+/* Стрелка вправо */
+.slick-arrow.slick-next {
+}
+/* Стрелка не активная */
+.slick-arrow.slick-disabled {
+}
+/* Точки (булиты) */
+.slick-dots {
+}
+.slick-dots li {
+}
+/* Активная точка */
+.slick-dots li.slick-active {
+}
+/* Элемент точки */
+.slick-dots li button {
+}
+
+.slider {
+  position: relative;
+  padding: 0 100px;
+  margin: 0 0 60px 0;
+  .our_pets__column {
+    display: flex;
+    min-width: 0;
+    width: 90%;
+    transition-duration: 1s;
+    &:hover {
+      box-shadow: 1px 1px 10px #bdb8b8;
+      button {
+        background-color: #f1d8c6;
+        &:hover {
+          box-shadow: 1px 1px 10px #bdb8b8;
+        }
+      }
+    }
+  }
+  .slider__item {
+    display: flex;
+    justify-content: center;
+  }
+  .slick-arrow {
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    font-size: 0;
+    width: 40px;
+    height: 40px;
+    margin: -20px 0 0 0;
+    border: 2px solid #f1cdb3;
+    border-radius: 50%;
+    &:hover {
+      box-shadow: 1px 1px 10px #bdb8b8;
+    }
+    &.slick-prev {
+      left: 0;
+      background: url("../../img/long-left-arrow.svg") 0 0/ 100% no-repeat;
+    }
+    &.slick-next {
+      right: 0;
+      background: url("../../img/long-right-arrow.svg") 0 0/ 100% no-repeat;
+      transform: rotate(180deg);
+    }
+  }
 }
