@@ -86,6 +86,10 @@ header {
       font-size: 15px;
       line-height: 1.93;
       color: #cdcdcd;
+      &:hover {
+        border-bottom: 2px solid #f1cdb3;
+        color: #fff;
+      }
     }
   }
 }
@@ -126,6 +130,12 @@ header {
   background-color: #f1cdb3;
   color: #292929;
   z-index: 2;
+  transition-duration: 1s;
+  &:hover {
+    box-shadow: 1px 1px 10px #fff;
+    color: #fff;
+    background-color: #746153;
+  }
 }
 
 .header__main_imag {
@@ -280,6 +290,10 @@ header {
   border-radius: 30px;
   background-color: #f1cdb3;
   color: #292929;
+  transition-duration: 700ms;
+  &:hover {
+    box-shadow: 1px 1px 10px #bdb8b8;
+  }
 }
 
 // слайдер slick
@@ -374,6 +388,7 @@ header {
     margin: -20px 0 0 0;
     border: 2px solid #f1cdb3;
     border-radius: 50%;
+    transition-duration: 700ms;
     &:hover {
       box-shadow: 1px 1px 10px #bdb8b8;
     }
@@ -387,4 +402,122 @@ header {
       transform: rotate(180deg);
     }
   }
+}
+
+.subtitle {
+  font-family: Georgia;
+  font-size: 20px;
+  line-height: 2.25;
+  letter-spacing: 1.2px;
+  text-align: center;
+  color: #545454;
+}
+
+.help {
+  padding: 70px 10px 0;
+}
+
+.container {
+}
+
+.help__title {
+  text-align: center;
+  margin: 0 0 50px 0;
+}
+
+.title {
+}
+
+.help__row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.help__item {
+  max-width: 20%;
+  min-width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 0 0 70px 0;
+}
+
+.help__icon {
+}
+
+.help__subtitle {
+}
+
+.subtitle {
+}
+
+.donation {
+  background-color: #f6f6f6;
+  padding: 80px 0;
+  .container {
+    max-width: 1000px;
+  }
+}
+
+.donation__row {
+  display: flex;
+  margin: 0 -30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.donation__item {
+  padding: 0 30px;
+  &:first-child {
+    width: 57%;
+  }
+  &:last-child {
+    width: 43%;
+  }
+  //flex: 1 1 50%;
+}
+
+.donation__image {
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.donation__title {
+  margin: 0 0 30px 0;
+}
+
+.donation_subtitle {
+  font-family: Georgia;
+  font-size: 15px;
+  letter-spacing: 0.9px;
+  color: #545454;
+  margin: 0 0 10px 0;
+}
+
+.donation__button {
+  margin: 0 0 30px 0;
+  padding: 0 3% 0 55px;
+  border-radius: 15px;
+  background: url("../../img/credit-card-1.png") 5% 50% no-repeat, #f1ceb4;
+  font-family: TimesNewRomanPSMT;
+  font-size: 20px;
+  line-height: 2;
+  letter-spacing: 1.2px;
+  color: #292929;
+  transition-duration: 700ms;
+  &:hover {
+    box-shadow: 1px 1px 10px #bdb8b8;
+  }
+}
+
+.donation__text {
+  font-family: Arial;
+  font-size: 12px;
+  font-style: italic;
+  line-height: 1.5;
+  color: #b2b2b2;
 }
