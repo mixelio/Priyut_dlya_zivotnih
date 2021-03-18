@@ -425,7 +425,7 @@ header {
 }
 .slider .slick-arrow.slick-prev {
   left: 0;
-  background: url("../img/long-left-arrow.svg") 0 0/100% no-repeat;
+  background: url(".../img/long-left-arrow.svg") 0 0/100% no-repeat;
 }
 .slider .slick-arrow.slick-next {
   right: 0;
