@@ -388,11 +388,11 @@ header {
     }
     &.slick-prev {
       left: 0;
-      background: url("./img/long-left-arrow.svg") 0 0/ 100% no-repeat;
+      background: url("../img/long-left-arrow.svg") 0 0/ 100% no-repeat;
     }
     &.slick-next {
       right: 0;
-      background: url("./img/long-right-arrow.svg") 0 0/ 100% no-repeat;
+      background: url("../img/long-right-arrow.svg") 0 0/ 100% no-repeat;
       transform: rotate(180deg);
     }
   }
@@ -496,7 +496,7 @@ header {
   margin: 0 0 30px 0;
   padding: 0 3% 0 55px;
   border-radius: 15px;
-  background: url("./img/credit-card-1.png") 5% 50% no-repeat, #f1ceb4;
+  background: url("../img/credit-card-1.png") 5% 50% no-repeat, #f1ceb4;
   font-family: TimesNewRomanPSMT;
   font-size: 20px;
   line-height: 2;
@@ -588,21 +588,21 @@ footer {
   margin: 0 0 10px;
   padding: 1px 0 0 60px;
   height: 26px;
-  background: url("./img/envelope.png") 0 50% no-repeat;
+  background: url("../img/envelope.png") 0 50% no-repeat;
 }
 
 .footer__phone {
   margin: 10px 0 0;
   padding: 7px 0 0 59px;
   height: 33px;
-  background: url("./img/telephone.png") 0 50% no-repeat;
+  background: url("../img/telephone.png") 0 50% no-repeat;
 }
 
 .footer__location {
   margin: 0 0 10px;
   padding: 0 0 0 59px;
   height: 39px;
-  background: url("./img/pin.png") 0 50% no-repeat;
+  background: url("../img/pin.png") 0 50% no-repeat;
   &:last-child {
     margin: 12px 0 0;
     padding: 11px 0 0 59px;
