@@ -599,7 +599,7 @@ footer {
   margin: 10px 0 0;
   padding: 7px 0 0 59px;
   height: 33px;
-  background: url("../img/telephone.png") 0 50% no-repeat;
+  background: url("./img/telephone.png") 0 50% no-repeat;
 }
 
 .footer__location {
