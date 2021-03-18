@@ -112,7 +112,6 @@ h6 {
 
 /*--------------------*/
 header {
-  border: 2px solid #09b343;
   position: relative;
   background: #322723;
   /* Old browsers */
@@ -218,7 +217,6 @@ header {
 }
 
 .header__main_imag {
-  border: 1px solid #b30909;
   box-sizing: border-box;
   float: right;
   position: absolute;
@@ -239,10 +237,6 @@ header {
   z-index: 0;
 }
 
-.about_shelter {
-  border: 2px solid #9609b3;
-}
-
 .about_shelter__box {
   padding: 80px 10%;
   display: flex;
@@ -251,6 +245,7 @@ header {
 }
 
 .about_shelter__item {
+  flex: 1 1 50%;
   padding: 0 60px;
 }
 
@@ -285,7 +280,6 @@ header {
 }
 
 .our_pets {
-  border: 2px solid #0eb6c1;
   background-color: #f6f6f6;
   padding: 75px 0 60px 0;
 }
@@ -483,7 +477,6 @@ header {
 
 .donation__row {
   display: flex;
-  margin: 0 -30px;
   justify-content: center;
   align-items: center;
 }
@@ -537,4 +530,90 @@ header {
   font-style: italic;
   line-height: 1.5;
   color: #b2b2b2;
+}
+
+footer {
+  padding: 75px 0 0;
+  background: #322723;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #322723 0%, #222021 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#322723", endColorstr="#222021",GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+}
+.footer__row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1 1 33.333%;
+  padding: 10px 0 70px;
+  position: relative;
+}
+.footer__item:last-child {
+  padding: 0;
+}
+.footer__item img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  object-fit: contain;
+}
+
+.footer__title {
+  margin: 0 0 35px;
+  font-family: Georgia;
+  font-size: 35px;
+  line-height: 1.29;
+  letter-spacing: 2.1px;
+  color: #ffffff;
+}
+
+.footer__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: TimesNewRomanPSMT;
+  font-size: 20px;
+  vertical-align: middle;
+  letter-spacing: 1.2px;
+  color: #f1cdb3;
+}
+
+.footer__mail {
+  margin: 0 0 10px;
+  padding: 1px 0 0 60px;
+  height: 26px;
+  background: url("../../img/envelope.png") 0 50% no-repeat;
+}
+
+.footer__phone {
+  margin: 10px 0 0;
+  padding: 7px 0 0 59px;
+  height: 33px;
+  background: url("../../img/telephone.png") 0 50% no-repeat;
+}
+
+.footer__location {
+  margin: 0 0 10px;
+  padding: 0 0 0 59px;
+  height: 39px;
+  background: url("../../img/pin.png") 0 50% no-repeat;
+}
+.footer__location:last-child {
+  margin: 12px 0 0;
+  padding: 11px 0 0 59px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
 }
