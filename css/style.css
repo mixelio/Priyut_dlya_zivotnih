@@ -592,7 +592,7 @@ footer {
   margin: 0 0 10px;
   padding: 1px 0 0 60px;
   height: 26px;
-  background: url("../img/envelope.png") 0 50% no-repeat;
+  background: url("../../img/envelope.png") 0 50% no-repeat;
 }
 
 .footer__phone {
