@@ -1,0 +1,218 @@
+@font-face {
+  font-family: "arial";
+  src: url("../fonts/arial.eot");
+  src: local("☺"), url("../fonts/arial.woff") format("woff"),
+    url("../fonts/arial.ttf") format("truetype"),
+    url("../fonts/arial.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "georgia";
+  src: url("../fonts/georgia.eot");
+  src: local("☺"), url("../fonts/georgia.woff") format("woff"),
+    url("../fonts/georgia.ttf") format("truetype"),
+    url("../fonts/georgia.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@import "nullstyle.scss";
+
+@import "header.scss";
+
+header {
+  padding: 30px 0 20px;
+  .menu {
+    a {
+      color: #545454;
+      &:hover {
+        color: #000;
+      }
+    }
+  }
+}
+
+.header__name-title,
+.header__name-subtitle {
+  color: #545454;
+}
+
+.header__box_1 {
+  align-items: center;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  padding: 60px 0 30px;
+  flex: 1 1 auto;
+  background-color: #f6f6f6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+h1 {
+  margin: 0 0 50px;
+  font-family: Georgia;
+  font-size: 35px;
+  line-height: 1.29;
+  letter-spacing: 2.1px;
+  text-align: center;
+  color: #545454;
+}
+
+/* Слайдер */
+.slick-slider {
+}
+/* Слайдер запущен */
+.slick-slider.slick-initialized {
+}
+/* Слайдер с точками */
+.slick-slider.slick-dotted {
+}
+/* Ограничивающая оболочка */
+.slick-list {
+  overflow: hidden;
+}
+/* Лента слайдов */
+.slick-track {
+  display: flex;
+  justify-content: center;
+  padding: 15px 15px 0;
+}
+/* Слайд */
+.slick-slide {
+}
+/* Слайд активный (показывается) */
+.slick-slide.slick-active {
+}
+/* Слайд основной */
+.slick-slide.slick-current {
+}
+/* Слайд по центру */
+.slick-slide.slick-center {
+}
+/* Клонированный слайд */
+.slick-slide.slick-cloned {
+}
+/* Стрелка */
+.slick-arrow {
+}
+/* Стрелка влево */
+.slick-arrow.slick-prev {
+}
+/* Стрелка вправо */
+.slick-arrow.slick-next {
+}
+/* Стрелка не активная */
+.slick-arrow.slick-disabled {
+}
+/* Точки (булиты) */
+.slick-dots {
+}
+.slick-dots li {
+}
+/* Активная точка */
+.slick-dots li.slick-active {
+}
+/* Элемент точки */
+.slick-dots li button {
+}
+
+.pets_slider {
+  position: relative;
+  //padding: 15px;
+  .slick-arrow {
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    font-size: 0;
+    &.slick-prev {
+      left: 0;
+    }
+    &.slick-next {
+      right: 0;
+    }
+  }
+  .slick-slide {
+  }
+  .our_pets__column {
+    display: flex;
+  }
+
+  .our_pets__item {
+    width: 90%;
+    margin: 0 0 25px;
+    //height: 95%;
+    padding: 35px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #fafafa;
+    img {
+      width: 100%;
+    }
+    &:hover {
+      box-shadow: 1px 1px 10px #bdb8b8;
+    }
+  }
+
+  .our_pets__subtitle {
+    font-family: Georgia;
+    font-size: 20px;
+    line-height: 2.25;
+    letter-spacing: 1.2px;
+    text-align: center;
+    color: #545454;
+  }
+
+  .our_pets__item_button {
+    padding: 15px 20px;
+    border: 2px solid #f1cdb3;
+    text-align: center;
+    border-radius: 30px;
+    font-family: Georgia;
+    font-size: 17px;
+    letter-spacing: 1.02px;
+    color: #292929;
+    background-color: #fafafa;
+    transition-duration: 1s;
+    &:hover {
+      color: #292929;
+      background-color: #f1cdb3;
+    }
+  }
+
+  .slick-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .slick-dots li {
+    margin: 0 10px;
+  }
+  /* Активная точка */
+  .slick-dots li.slick-active button {
+    background-color: #f1cdb3;
+  }
+  /* Элемент точки */
+  .slick-dots li button {
+    height: 50px;
+    width: 50px;
+    border: 2px solid #f1cdb3;
+    border-radius: 50%;
+  }
+}
+
+@import "footer.scss";

@@ -1,0 +1,49 @@
+header {
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header__box_1 {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 15% 0;
+  position: relative;
+  z-index: 1;
+}
+
+.header__name-title {
+  margin: 0 0 7px 0;
+  font-family: Georgia;
+  font-size: 32.5px;
+  text-align: center;
+  letter-spacing: 1.95px;
+  color: #f1cdb3;
+}
+
+.header__name-subtitle {
+  font-family: Arial;
+  font-size: 13px;
+  letter-spacing: 1.3px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.menu {
+  display: flex;
+  li {
+    margin: 0 0 0 30px;
+    a {
+      font-family: Arial;
+      font-size: 15px;
+      line-height: 1.93;
+      color: #cdcdcd;
+      &:hover {
+        border-bottom: 2px solid #f1cdb3;
+        color: #fff;
+      }
+    }
+  }
+}
