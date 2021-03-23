@@ -58,7 +58,7 @@ main {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 30px;
 }
 
 h1 {
@@ -82,13 +82,12 @@ h1 {
 }
 /* Ограничивающая оболочка */
 .slick-list {
+  padding: 15px;
   overflow: hidden;
 }
 /* Лента слайдов */
 .slick-track {
   display: flex;
-  justify-content: center;
-  padding: 15px 15px 0;
 }
 /* Слайд */
 .slick-slide {
@@ -130,88 +129,82 @@ h1 {
 }
 
 .pets_slider {
-  position: relative;
-  //padding: 15px;
-  .slick-arrow {
-    position: absolute;
-    top: 50%;
-    z-index: 10;
-    font-size: 0;
-    &.slick-prev {
-      left: 0;
-    }
-    &.slick-next {
-      right: 0;
-    }
-  }
-  .slick-slide {
-  }
-  .our_pets__column {
+  .pets_slider_item {
     display: flex;
+    justify-content: space-between;
   }
-
-  .our_pets__item {
-    width: 90%;
-    margin: 0 0 25px;
-    //height: 95%;
-    padding: 35px 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    background-color: #fafafa;
-    img {
-      width: 100%;
-    }
-    &:hover {
-      box-shadow: 1px 1px 10px #bdb8b8;
-    }
-  }
-
-  .our_pets__subtitle {
-    font-family: Georgia;
-    font-size: 20px;
-    line-height: 2.25;
-    letter-spacing: 1.2px;
-    text-align: center;
-    color: #545454;
-  }
-
-  .our_pets__item_button {
-    padding: 15px 20px;
-    border: 2px solid #f1cdb3;
-    text-align: center;
-    border-radius: 30px;
-    font-family: Georgia;
-    font-size: 17px;
-    letter-spacing: 1.02px;
-    color: #292929;
-    background-color: #fafafa;
-    transition-duration: 1s;
-    &:hover {
-      color: #292929;
-      background-color: #f1cdb3;
-    }
-  }
-
   .slick-dots {
     display: flex;
     justify-content: center;
     align-items: center;
   }
   .slick-dots li {
-    margin: 0 10px;
+    padding: 0 10px;
   }
-  /* Активная точка */
-  .slick-dots li.slick-active button {
-    background-color: #f1cdb3;
-  }
-  /* Элемент точки */
   .slick-dots li button {
-    height: 50px;
-    width: 50px;
-    border: 2px solid #f1cdb3;
+    border: 1px solid #aaa;
     border-radius: 50%;
+    width: 50px;
+    height: 50px;
+  }
+  .our_pets__column {
+    background-color: #fafafa;
+    margin: 0 15px;
+    display: flex;
+    flex: 1 1 25%;
+    transition-duration: 1s;
+    &:hover {
+      box-shadow: 1px 1px 10px #bdb8b8;
+      button {
+        background-color: #f1d8c6;
+        &:hover {
+          box-shadow: 1px 1px 10px #bdb8b8;
+        }
+      }
+    }
+
+    .our_pets__item {
+      padding: 35px 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      .our_pets__image {
+        flex-grow: 1;
+        img {
+          object-position: center;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+
+    .our_pets__subtitle {
+      font-family: Georgia;
+      font-size: 20px;
+      line-height: 2.25;
+      letter-spacing: 1.2px;
+      text-align: center;
+      color: #545454;
+    }
+
+    .our_pets__item_button {
+      padding: 5px 30px;
+      border: 2px solid #f1cdb3;
+      text-align: center;
+      border-radius: 30px;
+      font-family: Georgia;
+      font-size: 17px;
+      letter-spacing: 1.02px;
+      color: #292929;
+      background-color: #fafafa;
+      transition-duration: 1s;
+      &:hover {
+        color: #292929;
+        background-color: #f1cdb3;
+      }
+    }
   }
 }
 

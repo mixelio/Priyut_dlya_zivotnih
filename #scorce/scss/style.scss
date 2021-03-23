@@ -355,8 +355,9 @@ header {
   margin: 0 0 60px 0;
   .our_pets__column {
     display: flex;
+    justify-content: center;
     min-width: 0;
-    width: 90%;
+    width: 100%;
     transition-duration: 1s;
     &:hover {
       box-shadow: 1px 1px 10px #bdb8b8;

@@ -9,12 +9,13 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   $(".pets_slider").slick({
-    arrows: true,
+    arrows: false,
     dots: true,
-    slidesToShow: 4,
+    slidesToShow: 1,
     infinite: true,
-    speed: 500,
-    rows: 2,
-    slidesToScroll: 4,
+    fade: true,
+    cssEase: "linear",
+    speed: 10,
+    slidesToScroll: 1,
   });
 });
