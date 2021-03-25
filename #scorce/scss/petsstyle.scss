@@ -147,6 +147,11 @@ h1 {
     width: 50px;
     height: 50px;
   }
+
+  .slick-dots li.slick-active button {
+    background-color: #f1cdb3;
+  }
+
   .our_pets__column {
     background-color: #fafafa;
     margin: 0 15px;
@@ -198,7 +203,7 @@ h1 {
       font-size: 17px;
       letter-spacing: 1.02px;
       color: #292929;
-      background-color: #fafafa;
+      //  background-color: #fafafa;
       transition-duration: 1s;
       &:hover {
         color: #292929;

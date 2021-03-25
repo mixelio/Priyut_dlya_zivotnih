@@ -48,6 +48,7 @@
         <img src="./img/dog_header.png" alt="" />
       </div>
     </header>
+    <div id="fixpopup" class="fixpopup"></div>
     <content>
       <!-- Блок About shelter -->
 
@@ -106,8 +107,29 @@
                     name="more"
                     class="our_pets__item_button"
                   >
-                    Learn More
+                    <a href="#popup">Learn More</a>
                   </button>
+                  <!-- <div id="popup1" class="popup1">
+                    <a href="#fixpopup" class="popup__area"></a>
+                    <div class="popup__body">
+                      <div class="popup__content">
+                        <a href="#fixpopup" class="popup__close">X</a>
+                        <img src="./img/cat.jpg" alt="" />
+                        <h2 class="our_pets__subtitle">Katrine</h2>
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipisicing
+                          elit, sed do eiusmod tempor incididunt ut labore et
+                          dolore magna aliqua. Ut enim ad minim veniam, quis
+                          nostrud exercitation ullamco laboris nisi ut aliquip
+                          ex ea commodo consequat. Duis aute irure dolor in
+                          reprehenderit in voluptate velit esse cillum dolore eu
+                          fugiat nulla pariatur. Excepteur sint occaecat
+                          cupidatat non proident, sunt in culpa qui officia
+                          deserunt mollit anim id est laborum.
+                        </p>
+                      </div>
+                    </div>
+                  </div> -->
                 </div>
               </div>
             </div>
@@ -314,5 +336,26 @@
         </div>
       </div>
     </footer>
+    <div id="popup" class="popup">
+      <a href="#fixpopup" class="popup__area"></a>
+      <div class="popup__body">
+        <div class="popup__content">
+          <a href="#fixpopup" class="popup__close">X</a>
+          <img src="./img/cat.jpg" alt="" />
+          <div class="popup__info">
+            <h2 class="our_pets__subtitle">Katrine</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
