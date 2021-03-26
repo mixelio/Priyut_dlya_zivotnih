@@ -626,6 +626,8 @@ img {
   height: 100%;
 }
 
+// Стили ПопАпа
+
 .popup {
   position: fixed;
   width: 100%;
@@ -674,6 +676,7 @@ img {
 }
 
 .popup__content {
+  padding: 25px;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -688,13 +691,18 @@ img {
   transform: rotate(90deg);
   //transform: scale(0);
   img {
-    transform: scale(0.7);
+    //transform: scale(0.7);
+    padding: 25px;
   }
   .popup__info {
+    padding: 25px;
+    p {
+      //width: 90%;
+    }
     .our_pets__subtitle {
       font-size: 30px;
     }
-    width: 70%;
+    //width: 70%;
     font-size: 20px;
   }
 }

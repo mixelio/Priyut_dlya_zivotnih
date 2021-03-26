@@ -686,6 +686,7 @@ img {
 }
 
 .popup__content {
+  padding: 25px;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -700,10 +701,10 @@ img {
   transform: rotate(90deg);
 }
 .popup__content img {
-  transform: scale(0.7);
+  padding: 25px;
 }
 .popup__content .popup__info {
-  width: 70%;
+  padding: 25px;
   font-size: 20px;
 }
 .popup__content .popup__info .our_pets__subtitle {
