@@ -142,6 +142,7 @@ h1 {
     padding: 0 10px;
   }
   .slick-dots li button {
+    background-color: #f6f6f6;
     border: 1px solid #aaa;
     border-radius: 50%;
     width: 50px;
@@ -156,7 +157,10 @@ h1 {
     background-color: #fafafa;
     margin: 0 15px;
     display: flex;
-    flex: 1 1 25%;
+    justify-content: center;
+    flex: 1 25%;
+    width: 100%;
+
     transition-duration: 1s;
     &:hover {
       box-shadow: 1px 1px 10px #bdb8b8;
@@ -169,19 +173,22 @@ h1 {
     }
 
     .our_pets__item {
-      padding: 35px 40px;
+      padding: 0 0 40px;
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
       align-items: center;
-
+      //width: 100%;
       .our_pets__image {
-        flex-grow: 1;
+        display: flex;
+        //flex-grow: 1;
+        //width: 100%;
+        //height: 100%;
         img {
-          object-position: center;
+          //object-position: center;
           width: 100%;
-          height: 100%;
-          object-fit: cover;
+          //height: 100%;
+          //object-fit: cover;
         }
       }
     }
@@ -239,6 +246,10 @@ h1 {
       transform: translate(0, 0);
     }
   }
+  img {
+    width: auto;
+    height: 100%;
+  }
 }
 
 .popup__area {
@@ -277,10 +288,21 @@ h1 {
   transition-duration: 1000ms;
   opacity: 0;
   transform: translate(-100%, 0);
-  img {
-    padding: 25px;
+  .popup__item {
+    flex: 1;
+    height: 100%;
+    width: 100%;
+    img {
+      //width: 100%;
+      height: 100%;
+      padding: 25px;
+    }
   }
+
   .popup__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     padding: 25px;
     .our_pets__subtitle {
       font-size: 30px;
