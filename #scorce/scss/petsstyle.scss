@@ -237,7 +237,7 @@ h1 {
   visibility: hidden;
   overflow-x: hidden;
   overflow-y: auto;
-  transition-duration: 1000ms;
+  transition-duration: 600ms;
   &:target {
     opacity: 1;
     visibility: visible;
@@ -282,44 +282,45 @@ h1 {
   padding: 30px;
   background-color: #fff;
   color: #000;
-  width: 1000px;
-  height: 600px;
+  width: 600px;
+  height: 400px;
   position: relative;
-  transition-duration: 1000ms;
+  overflow: hidden;
   opacity: 0;
-  transform: translate(-100%, 0);
-  .popup__item {
-    flex: 1;
-    height: 100%;
-    width: 100%;
-    img {
-      //width: 100%;
-      height: 100%;
-      padding: 25px;
-    }
-  }
+  transform: translate(0, -100%);
+  transition: all 0.6s ease 0s;
 
   .popup__info {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding: 25px;
-    .our_pets__subtitle {
-      font-size: 30px;
-      line-height: 2.25;
-      letter-spacing: 1.2px;
-      text-align: center;
-      color: #545454;
+    height: 100%;
+    width: 50%;
+    overflow: hidden;
+    p {
+      line-height: 1.2;
+      letter-spacing: 1px;
     }
-    font-size: 20px;
+    .our_pets__subtitle {
+      font-size: 20px;
+    }
+
+    font-size: 15px;
+  }
+  .popup__close {
+    width: 20px;
+    position: absolute;
+
+    top: 10px;
+    right: 10px;
+    font-size: 25px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .popup__item {
+    padding: 10px;
   }
 }
-
-.popup__close {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 25px;
-}
-
 @import "footer.scss";

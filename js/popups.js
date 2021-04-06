@@ -4,35 +4,33 @@ const lockPadding = document.querySelectorAll(".lock-padding");
 
 let unlock = true;
 
-const timeout = 700;
+const timeout = 600;
 
 if (popupLinks.length > 0) {
   for (let index = 0; index < popupLinks.length; index++) {
     const popupLink = popupLinks[index];
-    popupLinks.addEventListener("click", function (e) {
+    popupLink.addEventListener("click", function (e) {
       const popupName = popupLink.getAttribute("href").replace("#", "");
       const curentPopup = document.getElementById(popupName);
       popupOpen(curentPopup);
-      e.preventDefault();
+      //e.preventDtfault();
     });
   }
 }
-
-const popupCloseIcon = document.querySelectorAll("close-popup");
-
+const popupCloseIcon = document.querySelectorAll(".popup__close");
 if (popupCloseIcon.length > 0) {
   for (let index = 0; index < popupCloseIcon.length; index++) {
     const el = popupCloseIcon[index];
     el.addEventListener("click", function (e) {
       popupClose(el.closest(".popup"));
-      e.preventDefault();
+      //e.preventDtfault();
     });
   }
 }
 
 function popupOpen(curentPopup) {
   if (curentPopup && unlock) {
-    const popupActive = document.querySelector(".popup.open");
+    const popupActive = document.querySelector(".slick-slide.popup.open");
     if (popupActive) {
       popupClose(popupActive, false);
     } else {
@@ -46,19 +44,18 @@ function popupOpen(curentPopup) {
     });
   }
 }
-
 function popupClose(popupActive, doUnlock = true) {
   if (unlock) {
     popupActive.classList.remove("open");
     if (doUnlock) {
-      bodyUnLock();
+      bodyUnlock();
     }
   }
 }
-
 function bodyLock() {
   const lockPaddingValue =
     window.innerWidth - document.querySelector(".wrapper").offsetWidth + "px";
+
   if (lockPadding.length > 0) {
     for (let index = 0; index < lockPadding.length; index++) {
       const el = lockPadding[index];
@@ -74,13 +71,15 @@ function bodyLock() {
   }, timeout);
 }
 
-function bodyUnLock() {
+function bodyUnlock() {
   setTimeout(function () {
-    for (let index = 0; index < lockPadding.length; index++) {
-      const el = lockPadding[index];
-      el.style.paddingRight = "0px";
+    if (lockPadding.length > 0) {
+      for (let index = 0; index < lockPadding.length; index++) {
+        const el = (lockPadding = [index]);
+        el.style.paddingRight = "0px";
+      }
     }
-    body.stule.paddingRight = "0px";
+    body.style.paddingRight = "0px";
     body.classList.remove("lock");
   }, timeout);
 
@@ -89,3 +88,10 @@ function bodyUnLock() {
     unlock = true;
   }, timeout);
 }
+
+document.addEventListener("keydown", function (e) {
+  if (e.which === 27) {
+    const popupActive = document.querySelector(".slick-slide.popup.open");
+    popupClose(popupActive);
+  }
+});
