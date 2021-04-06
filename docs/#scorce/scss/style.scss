@@ -1,130 +1,50 @@
-@charset "UTF-8";
 @font-face {
   font-family: "arial";
   src: url("../fonts/arial.eot");
-  src: local("☺"), url("../fonts/arial.woff") format("woff"), url("../fonts/arial.ttf") format("truetype"), url("../fonts/arial.svg") format("svg");
+  src: local("☺"), url("../fonts/arial.woff") format("woff"),
+    url("../fonts/arial.ttf") format("truetype"),
+    url("../fonts/arial.svg") format("svg");
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: "georgia";
   src: url("../fonts/georgia.eot");
-  src: local("☺"), url("../fonts/georgia.woff") format("woff"), url("../fonts/georgia.ttf") format("truetype"), url("../fonts/georgia.svg") format("svg");
+  src: local("☺"), url("../fonts/georgia.woff") format("woff"),
+    url("../fonts/georgia.ttf") format("truetype"),
+    url("../fonts/georgia.svg") format("svg");
   font-weight: normal;
   font-style: normal;
 }
-/*Обнуление*/
-* {
-  padding: 0;
-  margin: 0;
-  border: 0;
-}
 
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-}
+@import "nullstyle.scss";
 
-:focus,
-:active {
-  outline: none;
-}
+// Блок шапки
 
-a {
-  text-decoration: none;
-  color: black;
-}
-
-a:focus,
-a:active {
-  outline: none;
-}
-
-nav,
-footer,
-header,
-aside {
-  display: block;
-}
-
-html,
-body {
-  height: 100%;
-  width: 100%;
-  font-size: 100%;
-  line-height: 1;
-  font-size: 14px;
-  -ms-text-size-adjust: 100%;
-  -moz-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-}
-
-input,
-button,
-textarea {
-  font-family: inherit;
-}
-
-input::-ms-clear {
-  display: none;
-}
-
-button {
-  cursor: pointer;
-}
-
-button::-moz-focus-inner {
-  padding: 0;
-  border: 0;
-}
-
-a,
-a:visited {
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: none;
-}
-
-span:hover {
-  cursor: default;
-}
-
-ul li {
-  list-style: none;
-}
-
-img {
-  vertical-align: top;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-size: inherit;
-  font-weight: inherit;
-}
-
-/*--------------------*/
 body.lock {
   overflow: hidden;
 }
 
 header {
   position: relative;
-  background: #322723;
-  /* Old browsers */
-  /* FF3.6-15 */
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(135deg, #322723 0%, #222021 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#322723", endColorstr="#222021",GradientType=1 );
-  /* IE6-9 fallback on horizontal gradient */
+  background: #322723; /* Old browsers */
+  background: -moz-linear-gradient(
+    -45deg,
+    #322723 0%,
+    #222021 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    -45deg,
+    #322723 0%,
+    #222021 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    135deg,
+    #322723 0%,
+    #222021 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#322723', endColorstr='#222021',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
 .goup {
@@ -133,12 +53,15 @@ header {
   right: 50px;
   width: 50px;
   height: 50px;
-  background: url("../img/goup.png") 50%/contain no-repeat;
+  //border: 1px solid #000;
+  //border-radius: 50%;
+  background: url("../img/goup.png") 50% / contain no-repeat;
+
   opacity: 0.1;
   transition-duration: 700ms;
-}
-.goup:hover {
-  opacity: 1;
+  &:hover {
+    opacity: 1;
+  }
 }
 
 .container {
@@ -175,19 +98,19 @@ header {
 
 .menu {
   display: flex;
-}
-.menu li {
-  margin: 0 0 0 30px;
-}
-.menu li a {
-  font-family: Arial;
-  font-size: 15px;
-  line-height: 1.93;
-  color: #cdcdcd;
-}
-.menu li a:hover {
-  border-bottom: 2px solid #f1cdb3;
-  color: #fff;
+  li {
+    margin: 0 0 0 30px;
+    a {
+      font-family: Arial;
+      font-size: 15px;
+      line-height: 1.93;
+      color: #cdcdcd;
+      &:hover {
+        border-bottom: 2px solid #f1cdb3;
+        color: #fff;
+      }
+    }
+  }
 }
 
 .header__info {
@@ -227,11 +150,11 @@ header {
   color: #292929;
   z-index: 2;
   transition-duration: 1s;
-}
-.header__btn:hover {
-  box-shadow: 1px 1px 10px #fff;
-  color: #fff;
-  background-color: #746153;
+  &:hover {
+    box-shadow: 1px 1px 10px #fff;
+    color: #fff;
+    background-color: #746153;
+  }
 }
 
 .header__main_imag {
@@ -242,17 +165,25 @@ header {
   right: 0;
   width: 100%;
   height: 100%;
+
+  img {
+    width: 70%;
+    height: 100%;
+    max-width: 1200px;
+    object-fit: cover;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    box-sizing: border-box;
+    z-index: 0;
+  }
 }
-.header__main_imag img {
-  width: 70%;
-  height: 100%;
-  max-width: 1200px;
-  object-fit: cover;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  box-sizing: border-box;
-  z-index: 0;
+
+// Блок с контентом
+
+// О приюте
+
+.about_shelter {
 }
 
 .about_shelter__box {
@@ -284,10 +215,12 @@ header {
   font-size: 15px;
   line-height: 1.6;
   color: #4c4c4c;
+  p {
+    margin-bottom: 15px;
+  }
 }
-.about_shelter__text p {
-  margin-bottom: 15px;
-}
+
+// Общий заголовок
 
 .title {
   font-family: Georgia;
@@ -296,6 +229,8 @@ header {
   letter-spacing: 2.1px;
   color: #545454;
 }
+
+// Наши питомцы
 
 .our_pets {
   background-color: #f6f6f6;
@@ -310,6 +245,7 @@ header {
 .our_pets__box {
   display: flex;
   justify-content: space-between;
+  //margin: 0 0 60px 0;
 }
 
 .our_pets__subtitle {
@@ -332,18 +268,16 @@ header {
   color: #292929;
   background-color: #fafafa;
   transition-duration: 1s;
-}
-.our_pets__item_button:hover {
-  color: #292929;
-  background-color: #f1cdb3;
-}
-.our_pets__item_button a {
-  height: 100%;
-  padding: 12px 12px;
-}
-@media (min-width: 910px) {
-  .our_pets__item_button a {
-    padding: 12px 40px;
+  &:hover {
+    color: #292929;
+    background-color: #f1cdb3;
+  }
+  a {
+    height: 100%;
+    padding: 12px 12px;
+    @media (min-width: 910px) {
+      padding: 12px 40px;
+    }
   }
 }
 
@@ -363,107 +297,143 @@ header {
   background-color: #f1cdb3;
   color: #292929;
   transition-duration: 700ms;
-}
-.our_pets__btn:hover {
-  box-shadow: 1px 1px 10px #bdb8b8;
+  &:hover {
+    box-shadow: 1px 1px 10px #bdb8b8;
+  }
 }
 
+// слайдер slick
+
 /* Слайдер */
+.slick-slider {
+}
 /* Слайдер запущен */
+.slick-slider.slick-initialized {
+}
 /* Слайдер с точками */
+.slick-slider.slick-dotted {
+}
 /* Ограничивающая оболочка */
 .slick-list {
   overflow: hidden;
 }
-
 /* Лента слайдов */
 .slick-track {
   display: flex;
   padding: 30px 0;
 }
-
 /* Слайд */
+.slick-slide {
+}
 /* Слайд активный (показывается) */
+.slick-slide.slick-active {
+}
 /* Слайд основной */
+.slick-slide.slick-current {
+}
 /* Слайд по центру */
+.slick-slide.slick-center {
+}
 /* Клонированный слайд */
+.slick-slide.slick-cloned {
+}
 /* Стрелка */
+.slick-arrow {
+}
 /* Стрелка влево */
+.slick-arrow.slick-prev {
+}
 /* Стрелка вправо */
+.slick-arrow.slick-next {
+}
 /* Стрелка не активная */
+.slick-arrow.slick-disabled {
+}
 /* Точки (булиты) */
+.slick-dots {
+}
+.slick-dots li {
+}
 /* Активная точка */
+.slick-dots li.slick-active {
+}
 /* Элемент точки */
+.slick-dots li button {
+}
+
 .slider {
   position: relative;
   padding: 0 100px;
   margin: 0 0 60px 0;
-}
-.slider .our_pets__column {
-  display: flex;
-  align-items: flex-end;
-  width: 100%;
-  margin: 0 20px;
-  background-color: #fafafa;
-}
-.slider .our_pets__column:hover {
-  box-shadow: 1px 1px 5px #bdb8b8;
-}
-.slider .our_pets__column .our_pets__item {
-  padding: 0 0 40px 0;
-  display: flex;
-  flex-grow: 1;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-}
-.slider .our_pets__column .our_pets__item .our_pets__image {
-  flex-grow: 1;
-}
-.slider .our_pets__column .our_pets__item .our_pets__image img {
-  flex-grow: 1;
-  width: 100%;
-}
-.slider .our_pets__column .our_pets__item button {
-  background-color: #f1d8c6;
-}
-.slider .our_pets__column .our_pets__item button:hover {
-  box-shadow: 1px 1px 10px #bdb8b8;
-}
-.slider .slider__item {
-  display: flex;
-  justify-content: center;
-}
-.slider .slick-arrow {
-  position: absolute;
-  top: 50%;
-  z-index: 10;
-  font-size: 0;
-  width: 40px;
-  height: 40px;
-  margin: -20px 0 0 0;
-  border: 2px solid #f1cdb3;
-  border-radius: 50%;
-  transition-duration: 700ms;
-}
-.slider .slick-arrow:hover {
-  box-shadow: 1px 1px 10px #bdb8b8;
-  background-color: #f1cdb3;
-}
-.slider .slick-arrow.slick-prev {
-  left: 0;
-  background: url("../img/long-left-arrow.svg") 0 0/100% no-repeat;
-}
-.slider .slick-arrow.slick-prev:hover {
-  background: url("../img/long-left-arrow.svg") 0 0/100% no-repeat, #f1cdb3;
-}
-.slider .slick-arrow.slick-next {
-  right: 0;
-  background: url("../img/long-right-arrow.svg") 0 0/100% no-repeat;
-  transform: rotate(180deg);
-}
-.slider .slick-arrow.slick-next:hover {
-  background: url("../img/long-right-arrow.svg") 0 0/100% no-repeat, #f1cdb3;
+  .our_pets__column {
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    margin: 0 20px;
+    background-color: #fafafa;
+
+    &:hover {
+      box-shadow: 1px 1px 5px #bdb8b8;
+    }
+    .our_pets__item {
+      padding: 0 0 40px 0;
+      display: flex;
+      flex-grow: 1;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      .our_pets__image {
+        flex-grow: 1;
+        img {
+          flex-grow: 1;
+          width: 100%;
+        }
+      }
+      button {
+        background-color: #f1d8c6;
+        &:hover {
+          box-shadow: 1px 1px 10px #bdb8b8;
+        }
+      }
+    }
+  }
+  .slider__item {
+    display: flex;
+    justify-content: center;
+  }
+  .slick-arrow {
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    font-size: 0;
+    width: 40px;
+    height: 40px;
+    margin: -20px 0 0 0;
+    border: 2px solid #f1cdb3;
+    border-radius: 50%;
+    transition-duration: 700ms;
+    &:hover {
+      box-shadow: 1px 1px 10px #bdb8b8;
+      background-color: #f1cdb3;
+    }
+    &.slick-prev {
+      left: 0;
+      background: url("../img/long-left-arrow.svg") 0 0/ 100% no-repeat;
+      &:hover {
+        background: url("../img/long-left-arrow.svg") 0 0/ 100% no-repeat,
+          #f1cdb3;
+      }
+    }
+    &.slick-next {
+      right: 0;
+      background: url("../img/long-right-arrow.svg") 0 0/ 100% no-repeat;
+      transform: rotate(180deg);
+      &:hover {
+        background: url("../img/long-right-arrow.svg") 0 0/ 100% no-repeat,
+          #f1cdb3;
+      }
+    }
+  }
 }
 
 .subtitle {
@@ -479,9 +449,15 @@ header {
   padding: 70px 10px 0;
 }
 
+.container {
+}
+
 .help__title {
   text-align: center;
   margin: 0 0 50px 0;
+}
+
+.title {
 }
 
 .help__row {
@@ -503,30 +479,34 @@ header {
 .donation {
   background-color: #f6f6f6;
   padding: 80px 0;
-}
-.donation .container {
-  max-width: 1000px;
+  .container {
+    max-width: 1000px;
+  }
 }
 
 .donation__row {
   display: flex;
+
   justify-content: center;
   align-items: center;
 }
 
 .donation__item {
   padding: 0 30px;
-}
-.donation__item:first-child {
-  width: 57%;
-}
-.donation__item:last-child {
-  width: 43%;
+  &:first-child {
+    width: 57%;
+  }
+  &:last-child {
+    width: 43%;
+  }
+  //flex: 1 1 50%;
 }
 
-.donation__image img {
-  width: 100%;
-  height: 100%;
+.donation__image {
+  img {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .donation__title {
@@ -552,9 +532,9 @@ header {
   letter-spacing: 1.2px;
   color: #292929;
   transition-duration: 700ms;
-}
-.donation__button:hover {
-  box-shadow: 1px 1px 10px #bdb8b8;
+  &:hover {
+    box-shadow: 1px 1px 10px #bdb8b8;
+  }
 }
 
 .donation__text {
@@ -567,15 +547,27 @@ header {
 
 footer {
   padding: 75px 0 0;
-  background: #322723;
-  /* Old browsers */
-  /* FF3.6-15 */
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(135deg, #322723 0%, #222021 100%);
-  /* W3C, IE10+, FF1fixpopup6+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#322723", endColorstr="#222021",GradientType=1 );
-  /* IE6-9 fallback on horizontal gradient */
+  background: #322723; /* Old browsers */
+  background: -moz-linear-gradient(
+    -45deg,
+    #322723 0%,
+    #222021 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    -45deg,
+    #322723 0%,
+    #222021 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    135deg,
+    #322723 0%,
+    #222021 100%
+  ); /* W3C, IE10+, FF1fixpopup6+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#322723', endColorstr='#222021',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  .container {
+  }
 }
+
 .footer__row {
   display: flex;
   justify-content: space-between;
@@ -588,17 +580,17 @@ footer {
   flex: 1 1 33.333%;
   padding: 10px 0 70px;
   position: relative;
-}
-.footer__item:last-child {
-  padding: 0;
-}
-.footer__item img {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  object-fit: contain;
+  &:last-child {
+    padding: 0;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    object-fit: contain;
+  }
 }
 
 .footer__title {
@@ -640,21 +632,24 @@ footer {
   padding: 0 0 0 59px;
   height: 39px;
   background: url("../img/pin.png") 0 50% no-repeat;
-}
-.footer__location:last-child {
-  margin: 12px 0 0;
-  padding: 11px 0 0 59px;
+  &:last-child {
+    margin: 12px 0 0;
+    padding: 11px 0 0 59px;
+  }
 }
 
 img {
+  //width: 100%;
   height: 100%;
 }
+
+// Стили ПопАпа
 
 .popup {
   position: fixed;
   width: 100%;
   height: 100%;
-  background-color: rgba(59, 53, 53, 0.64);
+  background-color: rgba(#3b3535, 0.64);
   top: 0;
   left: 0;
   z-index: 0;
@@ -663,15 +658,15 @@ img {
   overflow-x: hidden;
   overflow-y: auto;
   transition: all 0.6s ease 0s;
-}
-.popup:target {
-  opacity: 1;
-  visibility: visible;
-  z-index: 15;
-}
-.popup:target .popup__content {
-  opacity: 1;
-  transform: translate(0, 0);
+  &:target {
+    opacity: 1;
+    visibility: visible;
+    z-index: 15;
+    .popup__content {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+  }
 }
 
 .popup__body {
@@ -697,32 +692,37 @@ img {
   opacity: 0;
   transform: translate(0, -100%);
   transition: all 0.6s ease 0s;
-}
-.popup__content .popup__info {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  width: 50%;
-  overflow: hidden;
-  font-size: 15px;
-}
-.popup__content .popup__info p {
-  line-height: 1.2;
-  letter-spacing: 1px;
-}
-.popup__content .popup__info .our_pets__subtitle {
-  font-size: 20px;
-}
-.popup__content .popup__close {
-  width: 20px;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 25px;
-}
-.popup__content .popup__close img {
-  width: 100%;
-}
-.popup__content .popup__item {
-  padding: 10px;
+
+  .popup__info {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 50%;
+    overflow: hidden;
+    p {
+      line-height: 1.2;
+      letter-spacing: 1px;
+    }
+    .our_pets__subtitle {
+      font-size: 20px;
+    }
+
+    font-size: 15px;
+  }
+  .popup__close {
+    width: 20px;
+    position: absolute;
+
+    top: 10px;
+    right: 10px;
+    font-size: 25px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .popup__item {
+    padding: 10px;
+  }
 }
